@@ -17,6 +17,7 @@
 	--primary-color-hover: #b04c1c;
 	--secondary-color: #4c6d33;
 	--secondary-color-hover: #34511d;
+	--secondary-color-light: #65ab2e;
 
 	--text-color: #232323;
 
@@ -38,6 +39,7 @@ body {
 }
 
 .MaxWidthWrapper {
+	width: 90%;
 	max-width: var(--max-width);
 	margin: 0 auto;
 }
