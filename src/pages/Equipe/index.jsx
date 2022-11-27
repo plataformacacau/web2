@@ -86,16 +86,20 @@ const equipeDev = [
 	{
 		nome: "Igor Rocha",
 		cargo: "Desenvolvedor/Designer",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://github.com/igorroc.png",
 		descricao: "Aluno do curso de Ciência da Computação da UESC",
 		links: [
 			{
-				link: "https://linkedin.com",
+				link: "https://www.linkedin.com/in/igorroc/",
 				icon: "akar-icons:linkedin-box-fill",
 			},
 			{
-				link: "https://github.com",
+				link: "https://github.com/igorroc",
 				icon: "akar-icons:github-fill",
+			},
+			{
+				link: "https://ilrocha.com",
+				icon: "akar-icons:globe",
 			},
 		],
 	},
