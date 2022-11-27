@@ -5,9 +5,9 @@ import { StyledHeader } from "./styles"
 
 const navList = [
 	{ name: "Início", path: "/", active: false },
-	{ name: "Sobre", path: "/about", active: false },
-	{ name: "Envolvidos", path: "/equipe", active: false },
-	{ name: "Contato", path: "/contato", active: false },
+	{ name: "Sobre", path: "./sobre", active: false },
+	{ name: "Envolvidos", path: "./equipe", active: false },
+	{ name: "Contato", path: "./contato", active: false },
 ]
 
 export default function Header(props) {
@@ -31,9 +31,7 @@ export default function Header(props) {
 							<a
 								key={index}
 								href={item.path}
-								className={
-									item.active ? "navItem active" : "navItem"
-								}
+								className={item.active ? "navItem active" : "navItem"}
 							>
 								{item.name}
 							</a>
