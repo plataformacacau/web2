@@ -238,7 +238,7 @@ export const StyledSobre = styled("div", {
 					alignItems: "center",
 					justifyContent: "center",
 					borderRadius: "50%",
-					background: "white",
+					background: "#e5e5e5",
 					color: "var(--secondary-color)",
 					border: "4px solid var(--secondary-color)",
 					fontSize: "2.5rem",
