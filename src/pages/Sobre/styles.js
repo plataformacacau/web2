@@ -1,4 +1,10 @@
-import { styled } from "@stitches/react"
+import { keyframes, styled } from "@stitches/react"
+
+const GrowUp = keyframes({
+	"0%": { transform: "var(--transform) scale(1)" },
+	"50%": { transform: "var(--transform) scale(1.2)" },
+	"100%": { transform: "var(--transform) scale(1)" },
+})
 
 export const StyledSobre = styled("div", {
 	main: {
@@ -78,6 +84,43 @@ export const StyledSobre = styled("div", {
 				flexDirection: "column",
 				gap: "1rem",
 			},
+
+			".image": {
+				position: "relative",
+				filter: "drop-shadow(0 10px 15px #0004)",
+
+				"&:before": {
+					"--delay": "-0.5s",
+					content: '""',
+					position: "absolute",
+					top: 0,
+					left: 0,
+					"--transform": "translate(-50%, -50%)",
+					width: 200,
+					height: 200,
+					borderRadius: "50%",
+					border: "15px solid var(--secondary-color)",
+					opacity: 0.5,
+					transition: "all 0.3s ease",
+					animation: `${GrowUp} 3s var(--delay) ease-in-out infinite`,
+				},
+
+				"&:after": {
+					"--delay": "0s",
+					content: '""',
+					position: "absolute",
+					top: 0,
+					left: 0,
+					"--transform": "translate(-50%, -50%)",
+					width: 100,
+					height: 100,
+					borderRadius: "50%",
+					border: "15px solid var(--secondary-color)",
+					opacity: 0.5,
+					transition: "all 0.3s ease",
+					animation: `${GrowUp} 3s var(--delay) ease-in-out infinite`,
+				},
+			},
 		},
 
 		".listaFuncionalidades": {
@@ -147,11 +190,29 @@ export const StyledSobre = styled("div", {
 
 			".image": {
 				height: 450,
+				position: "relative",
 
 				img: {
 					width: "100%",
 					height: "100%",
 					objectFit: "cover",
+				},
+
+				".circle": {
+					"--delay": "calc(-0.5s * var(--index))",
+					"--width": "calc(150px * var(--index))",
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					zIndex: -1,
+					"--transform": "translate(-50%, -50%)",
+					width: "var(--width)",
+					height: "var(--width)",
+					borderRadius: "50%",
+					background: "var(--secondary-color)",
+					opacity: 0.2,
+					transition: "all 0.3s ease",
+					animation: `${GrowUp} 3s var(--delay) ease-in-out infinite`,
 				},
 			},
 		},
@@ -212,9 +273,9 @@ export const StyledSobre = styled("div", {
 					alignItems: "center",
 					justifyContent: "center",
 
-                    p:{
-                        textAlign: "justify",
-                    }
+					p: {
+						textAlign: "justify",
+					},
 				},
 			},
 		},

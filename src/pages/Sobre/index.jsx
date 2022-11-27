@@ -147,6 +147,10 @@ export default function Sobre() {
 							</div>
 							<div className="image">
 								<img src={aplicativo} alt="Aplicativo" />
+								<span style={{ "--index": 1 }} className="circle"></span>
+								<span style={{ "--index": 2 }} className="circle"></span>
+								<span style={{ "--index": 3 }} className="circle"></span>
+								<span style={{ "--index": 4 }} className="circle"></span>
 							</div>
 						</div>
 					</section>
