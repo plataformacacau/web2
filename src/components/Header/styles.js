@@ -10,6 +10,8 @@ export const StyledHeader = styled("header", {
 	justifyContent: "center",
 	alignItems: "center",
 	backgroundColor: "white",
+	zIndex: 1000,
+	boxShadow: "0 10px 10px rgba(0, 0, 0, 0.5)",
 
 	".headerContainer": {
 		display: "flex",
