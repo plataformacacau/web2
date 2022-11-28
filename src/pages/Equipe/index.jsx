@@ -7,19 +7,19 @@ const equipe = [
 	{
 		nome: "Lindolfo Pereira",
 		cargo: "Socio fundador",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "CEPLAC (Comissão Executiva do Plano da Lavoura Cacaueira)",
 	},
 	{
 		nome: "Renato Novaes",
 		cargo: "Socio fundador",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "CEPLAC (Comissão Executiva do Plano da Lavoura Cacaueira)",
 	},
 	{
 		nome: "Marta Magda Dornelles",
 		cargo: "Socio fundador",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "Departamento de Ciências Exatas e Tecnológicas (DCET)",
 		links: [
 			{
@@ -38,7 +38,7 @@ const equipeDev = [
 	{
 		nome: "Adriel Fabrício",
 		cargo: "Desenvolvedor",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "Aluno do curso de Ciência da Computação da UESC",
 		links: [
 			{
@@ -54,7 +54,7 @@ const equipeDev = [
 	{
 		nome: "Henrique Serra",
 		cargo: "Desenvolvedor",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "Aluno do curso de Ciência da Computação da UESC",
 		links: [
 			{
@@ -70,7 +70,7 @@ const equipeDev = [
 	{
 		nome: "Christian Menezes",
 		cargo: "Desenvolvedor",
-		foto: "https://github.com/beatriz-ux.png",
+		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "Aluno do curso de Ciência da Computação da UESC",
 		links: [
 			{
