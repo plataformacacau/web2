@@ -49,8 +49,6 @@ export const StyledContato = styled("div", {
 						backgroundColor: "var(--secondary-color)",
 						color: "#fff",
 					},
-
-					
 				},
 			},
 		},
@@ -69,7 +67,7 @@ export const StyledContato = styled("div", {
 				},
 
 				"input, textarea": {
-					width: "100%",
+					width: "calc(100% - 20px)",
 					background: "none",
 					border: "1px solid #232323",
 					borderRadius: 5,
