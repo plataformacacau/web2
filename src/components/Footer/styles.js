@@ -1,4 +1,5 @@
-import { keyframes, styled } from "@stitches/react"
+import { keyframes } from "@stitches/react"
+import { styled } from "../../utils/globalStyle"
 
 const Animation = keyframes({
 	"0%": { backgroundPositionX: "-100%" },
@@ -10,6 +11,10 @@ export const StyledFooter = styled("footer", {
 	background: "var(--secondary-color-hover)",
 	color: "white",
 	padding: "2em 0",
+
+	p: {
+		textAlign: "justify",
+	},
 
 	".FooterContent": {
 		display: "flex",
@@ -38,7 +43,14 @@ export const StyledFooter = styled("footer", {
 
 			".realizacao": {
 				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
 				gap: 16,
+
+				"@bp2": {
+					flexDirection: "column",
+					alignItems: "center",
+				},
 			},
 
 			"&.info": {
@@ -56,6 +68,11 @@ export const StyledFooter = styled("footer", {
 				},
 			},
 		},
+
+		"@bp2": {
+			flexDirection: "column",
+			alignItems: "center",
+		},
 	},
 
 	hr: {
@@ -64,8 +81,9 @@ export const StyledFooter = styled("footer", {
 
 	".copy": {
 		textAlign: "center",
-		marginBottom: "50px",
-
+		p: {
+			textAlign: "center",
+		},
 		a: {
 			textDecoration: "none",
 			position: "relative",
