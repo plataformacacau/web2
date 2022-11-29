@@ -1,4 +1,5 @@
-import { keyframes, styled } from "@stitches/react"
+import { keyframes } from "@stitches/react"
+import { styled } from "../../utils/globalStyle"
 
 const GrowUp = keyframes({
 	"0%": { transform: "var(--transform) scale(1)" },
@@ -120,6 +121,10 @@ export const StyledSobre = styled("div", {
 					transition: "all 0.3s ease",
 					animation: `${GrowUp} 3s var(--delay) ease-in-out infinite`,
 				},
+			},
+
+			"@bp3": {
+				flexDirection: "column",
 			},
 		},
 
@@ -275,6 +280,41 @@ export const StyledSobre = styled("div", {
 
 					p: {
 						textAlign: "justify",
+					},
+				},
+			},
+
+			"@bp2": {
+				flexDirection: "row",
+				alignItems: "stretch",
+
+				".integracaoIcons": {
+					flexDirection: "column",
+					width: "unset",
+					// height: "100%",
+					flexGrow: 1,
+
+					"&:after": {
+						content: '""',
+						width: "30%",
+						height: "calc(100% - 100px)",
+						background:
+							"linear-gradient(90deg, var(--secondary-color), var(--secondary-color-light))",
+						zIndex: -1,
+						top: "50%",
+						left: "50%",
+						transform: "translate(-50%, -50%)",
+					},
+				},
+
+				".integracaoTexts": {
+					flexDirection: "column",
+					gap: "2rem",
+
+					".integracaoText": {
+						width: "100%",
+						gap: "0.1rem",
+						alignItems: "start",
 					},
 				},
 			},
