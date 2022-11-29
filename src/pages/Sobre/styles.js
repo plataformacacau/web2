@@ -8,6 +8,9 @@ const GrowUp = keyframes({
 })
 
 export const StyledSobre = styled("div", {
+	p: {
+		textAlign: "justify",
+	},
 	main: {
 		height: "70vh",
 		display: "flex",
@@ -120,6 +123,12 @@ export const StyledSobre = styled("div", {
 					opacity: 0.5,
 					transition: "all 0.3s ease",
 					animation: `${GrowUp} 3s var(--delay) ease-in-out infinite`,
+				},
+
+				"@bp2": {
+					img: {
+						width: "100%",
+					},
 				},
 			},
 
