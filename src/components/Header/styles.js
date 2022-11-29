@@ -18,6 +18,7 @@ export const StyledHeader = styled("header", {
 		width: "90%",
 		justifyContent: "space-between",
 		alignItems: "center",
+		overflowX: "auto",
 
 		".logoContainer": {
 			display: "flex",
@@ -37,7 +38,7 @@ export const StyledHeader = styled("header", {
 				"&.active": {
 					fontWeight: "bold",
 					borderBottom: "4px solid var(--primary-color)",
-				}
+				},
 			},
 		},
 	},
