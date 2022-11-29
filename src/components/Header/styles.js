@@ -34,6 +34,10 @@ export const StyledHeader = styled("header", {
 				color: "var(--text-color)",
 				textDecoration: "none",
 				padding: "1rem",
+				"&.active": {
+					fontWeight: "bold",
+					borderBottom: "4px solid var(--primary-color)",
+				}
 			},
 		},
 	},
