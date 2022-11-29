@@ -229,6 +229,15 @@ export const StyledSobre = styled("div", {
 					animation: `${GrowUp} 3s var(--delay) ease-in-out infinite`,
 				},
 			},
+
+			"@bp2": {
+				".text": {
+					width: "100%",
+				},
+				".image": {
+					display: "none",
+				},
+			},
 		},
 
 		".integracao": {
