@@ -17,7 +17,7 @@ export default function Home() {
 				</p>
 				<div className="botoes">
 					<Botao outline>Faça Login</Botao>
-					<Botao>Saiba mais</Botao>
+					<Botao href="./sobre">Saiba mais</Botao>
 				</div>
 				<div className="BG">
 					<img src={Leaves} alt="background" />

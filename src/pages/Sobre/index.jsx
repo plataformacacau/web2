@@ -56,13 +56,13 @@ export default function Sobre() {
 								Sistema de <strong>gestão do plantio</strong> do Cacau
 							</h1>
 							<p>Plataforma integrada para controle e análise do cultivo do cacau</p>
-							<Botao>Saiba mais</Botao>
+							<Botao href="#saiba-mais">Saiba mais</Botao>
 						</div>
 						<div className="mainImage">
 							<img src={bgSobre} alt="" />
 						</div>
 					</main>
-					<section>
+					<section id="saiba-mais">
 						<h1>
 							Plataforma<strong>Cacau</strong>
 						</h1>

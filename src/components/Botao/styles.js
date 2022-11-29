@@ -1,6 +1,6 @@
 import { styled } from "@stitches/react"
 
-export const StyledBotao = styled("button", {
+export const StyledBotao = styled("a", {
 	backgroundColor: "var(--primary-color)",
 	color: "white",
 	padding: "1rem 2rem",
