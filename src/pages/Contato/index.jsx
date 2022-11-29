@@ -7,7 +7,7 @@ import Botao from "../../components/Botao"
 
 export default function Contato() {
 	return (
-		<Layout>
+		<Layout header="Contato">
 			<div className="MaxWidthWrapper">
 				<StyledContato>
 					<h1>Vamos manter contato!</h1>

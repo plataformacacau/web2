@@ -49,6 +49,8 @@ export const StyledContato = styled("div", {
 						backgroundColor: "var(--secondary-color)",
 						color: "#fff",
 					},
+
+					
 				},
 			},
 		},
