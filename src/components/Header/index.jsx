@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Logo from "../../assets/logo.png"
 import Botao from "../Botao"
 import { StyledHeader } from "./styles"
@@ -29,7 +29,9 @@ export default function Header(props) {
 							</a>
 						))}
 					</nav>
-					<Botao>Login</Botao>
+					<a href="http://plataformacacau.uesc.br/login">
+						<Botao>Login</Botao>
+					</a>
 				</div>
 			</StyledHeader>
 			<div className="space"></div>
