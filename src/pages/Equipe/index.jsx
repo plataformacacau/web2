@@ -6,19 +6,19 @@ import { StyledEquipe } from "./styles"
 const equipe = [
 	{
 		nome: "Lindolfo Pereira",
-		cargo: "Socio fundador",
+		cargo: "Colaborador",
 		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "CEPLAC (Comissão Executiva do Plano da Lavoura Cacaueira)",
 	},
 	{
-		nome: "Renato Novaes",
-		cargo: "Socio fundador",
+		nome: "Jauberth Abijaude",
+		cargo: "Colaborador",
 		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
-		descricao: "CEPLAC (Comissão Executiva do Plano da Lavoura Cacaueira)",
+		descricao: "Departamento de Ciências Exatas e Tecnológicas (DCET)",
 	},
 	{
 		nome: "Marta Magda Dornelles",
-		cargo: "Socio fundador",
+		cargo: "Coordenadora",
 		foto: "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
 		descricao: "Departamento de Ciências Exatas e Tecnológicas (DCET)",
 		links: [
