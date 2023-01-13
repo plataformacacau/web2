@@ -29,7 +29,7 @@ export default function Header(props) {
 							</a>
 						))}
 					</nav>
-					<a href="http://plataformacacau.uesc.br/login">
+					<a href="./login">
 						<Botao>Login</Botao>
 					</a>
 				</div>
