@@ -4,7 +4,7 @@ import { StyledLogin } from "./styles"
 import Leaves from "../../assets/leaves.png"
 import CustomInput from "../../components/StyledInput"
 
-export default function Login() {
+export default function EsqueciSenha() {
 	const [loginForm, setLoginForm] = useState({
 		email: "",
 		password: "",
@@ -18,10 +18,11 @@ export default function Login() {
 				</div>
 
 				<div className="content">
-					<h1>Entre na plataforma!</h1>
+					<h1>Esqueceu sua senha?</h1>
+					<p>Será enviado um código para você restaurar sua senha pelo seu email</p>
 					<form action="">
 						<CustomInput
-							icon="ph:user-circle"
+							icon="ph:envelope-simple"
 							name="email"
 							type="email"
 							id="email"
@@ -29,27 +30,8 @@ export default function Login() {
 							value={loginForm.email}
 							onChange={(e) => setLoginForm({ ...loginForm, email: e.target.value })}
 						/>
-						<CustomInput
-							icon="material-symbols:lock-outline"
-							name="password"
-							type="password"
-							id="password"
-							placeholder="Senha"
-							value={loginForm.password}
-							onChange={(e) =>
-								setLoginForm({ ...loginForm, password: e.target.value })
-							}
-						/>
-						<a href="./esqueci-senha">Esqueci minha senha</a>
-						<span>
-							Não tem uma conta?
-							<a href="./cadastro">Cadastre-se!</a>
-						</span>
-						<button
-							type="submit"
-							disabled={!loginForm.email || loginForm.password.length < 6}
-						>
-							Entrar
+						<button type="submit" disabled={!loginForm.email}>
+							Enviar
 						</button>
 					</form>
 				</div>

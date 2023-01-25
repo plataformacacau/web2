@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Cadastro from "./pages/Cadastro"
 import Sobre from "./pages/Sobre"
+import EsqueciSenha from "./pages/EsqueciSenha"
 
 export default function AppRoutes() {
 	return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
 				<Route path="/contato" element={<Contato />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/cadastro" element={<Cadastro />} />
+				<Route path="/esqueci-senha" element={<EsqueciSenha />} />
 			</Routes>
 		</BrowserRouter>
 	)
