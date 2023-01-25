@@ -12,7 +12,7 @@ export const StyledLogin = styled("main", {
 
 	".BG": {
 		flex: 1,
-		width: "50%",
+		maxWidth: "40%",
 		height: "100%",
 		zIndex: -1,
 
@@ -20,6 +20,10 @@ export const StyledLogin = styled("main", {
 			width: "100%",
 			height: "100%",
 			objectFit: "cover",
+		},
+
+		"@media (max-width: 768px)": {
+			maxWidth: 30,
 		},
 	},
 	".content": {
@@ -36,17 +40,6 @@ export const StyledLogin = styled("main", {
 			flexDirection: "column",
 			gap: 20,
 
-			input: {
-				width: "100%",
-				height: "max-content",
-				padding: "10px 15px",
-				borderRadius: 5,
-				border: "1px solid #000",
-				outline: "none",
-				background: "none",
-				color: "#000",
-			},
-
 			button: {
 				width: "100%",
 				height: "max-content",
@@ -58,6 +51,11 @@ export const StyledLogin = styled("main", {
 				outline: "none",
 				background: "var(--primary-color)",
 				cursor: "pointer",
+
+				"&:disabled": {
+					opacity: 0.5,
+					cursor: "not-allowed",
+				},
 			},
 		},
 
