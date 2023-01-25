@@ -43,7 +43,7 @@ export default function Login() {
 						<a href="#">Esqueci minha senha</a>
 						<span>
 							Não tem uma conta?
-							<a href="./sign-up">Cadastre-se!</a>
+							<a href="./cadastro">Cadastre-se!</a>
 						</span>
 						<button
 							type="submit"
