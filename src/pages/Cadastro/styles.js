@@ -1,6 +1,6 @@
 import { styled } from "@stitches/react"
 
-export const StyledSignUp = styled("main", {
+export const StyledCadastro = styled("main", {
 	position: "relative",
 	display: "flex",
 	flexDirection: "row",
@@ -46,18 +46,6 @@ export const StyledSignUp = styled("main", {
 				gap: 20,
 			},
 
-			"input:not([type=checkbox])": {
-				width: "calc(100% - 30px)",
-				flex: 1,
-				height: "max-content",
-				padding: "10px 15px",
-				borderRadius: 5,
-				border: "1px solid #000",
-				outline: "none",
-				background: "none",
-				color: "#000",
-			},
-
 			button: {
 				width: "100%",
 				height: "max-content",
@@ -69,12 +57,31 @@ export const StyledSignUp = styled("main", {
 				outline: "none",
 				background: "var(--primary-color)",
 				cursor: "pointer",
+				"%:disabled": {
+					opacity: 0.5,
+					cursor: "not-allowed",
+				},
 			},
 
 			label: {
 				display: "flex",
 				flexDirection: "row",
 				gap: 10,
+			},
+
+			".inputGroup": {
+				display: "flex",
+				flexDirection: "column",
+				gap: 5,
+			},
+
+			".error": {
+				color: "red",
+				background: "rgba(255, 0, 0, 0.1)",
+				padding: "5px 15px",
+				borderRadius: 5,
+				fontWeight: "500",
+				fontSize: "0.9em",
 			},
 		},
 

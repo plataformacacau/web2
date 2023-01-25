@@ -4,7 +4,7 @@ import Contato from "./pages/Contato"
 import Equipe from "./pages/Equipe"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
-import SignUp from "./pages/SignUp"
+import Cadastro from "./pages/Cadastro"
 import Sobre from "./pages/Sobre"
 
 export default function AppRoutes() {
@@ -16,7 +16,7 @@ export default function AppRoutes() {
 				<Route path="/equipe" element={<Equipe />} />
 				<Route path="/contato" element={<Contato />} />
 				<Route path="/login" element={<Login />} />
-				<Route path="/sign-up" element={<SignUp />} />
+				<Route path="/cadastro" element={<Cadastro />} />
 			</Routes>
 		</BrowserRouter>
 	)

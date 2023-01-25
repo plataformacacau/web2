@@ -14,6 +14,7 @@ export default function CustomInput(props) {
 				className="input"
 				value={props.value}
 				onChange={props.onChange}
+				required={props.required}
 			/>
 		</StyledInput>
 	)
