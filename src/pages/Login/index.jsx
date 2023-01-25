@@ -10,6 +10,11 @@ export default function Login() {
 		password: "",
 	})
 
+	function handleSubmit(e) {
+		e.preventDefault()
+		console.log(e)
+	}
+
 	return (
 		<Layout header="Início">
 			<StyledLogin>
@@ -19,13 +24,14 @@ export default function Login() {
 
 				<div className="content">
 					<h1>Entre na plataforma!</h1>
-					<form action="">
+					<form onSubmit={handleSubmit}>
 						<CustomInput
 							icon="ph:user-circle"
 							name="email"
 							type="email"
 							id="email"
 							placeholder="E-mail"
+							required
 							value={loginForm.email}
 							onChange={(e) => setLoginForm({ ...loginForm, email: e.target.value })}
 						/>
@@ -36,6 +42,7 @@ export default function Login() {
 							id="password"
 							placeholder="Senha"
 							value={loginForm.password}
+							required
 							onChange={(e) =>
 								setLoginForm({ ...loginForm, password: e.target.value })
 							}

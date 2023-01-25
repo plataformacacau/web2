@@ -12,7 +12,7 @@ export const StyledCadastro = styled("main", {
 
 	".BG": {
 		flex: 1,
-		width: "50%",
+		maxWidth: "40%",
 		height: "100%",
 		zIndex: -1,
 

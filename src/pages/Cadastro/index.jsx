@@ -7,7 +7,7 @@ import { checkCPF, organizeCPF } from "../../hooks/cpfHandler"
 import { checkPhoneNumber, organizePhoneNumber } from "../../hooks/phoneHandler"
 
 export default function Cadastro() {
-	const [CadastroForm, setCadastroForm] = useState({
+	const [cadastroForm, setCadastroForm] = useState({
 		fullName: "",
 		email: "",
 		phone: "",
@@ -23,33 +23,20 @@ export default function Cadastro() {
 		phone: "",
 		cpf: "",
 		password: "",
-		password2: "",
 		terms: "",
 	})
 
 	const [formIsValid, setFormIsValid] = useState(true)
 
 	function handleChange(e) {
-		// if (
-		// 	CadastroForm.fullName &&
-		// 	CadastroForm.email &&
-		// 	CadastroForm.phone &&
-		// 	CadastroForm.cpf &&
-		// 	CadastroForm.password
-		// ) {
-		// 	setFormIsValid(true)
-		// } else {
-		// 	setFormIsValid(false)
-		// }
-
 		if (e.target.name === "phone") {
 			let phone = organizePhoneNumber(e.target.value)
-			setCadastroForm({ ...CadastroForm, phone })
+			setCadastroForm({ ...cadastroForm, phone })
 		} else if (e.target.name === "cpf") {
 			let cpf = organizeCPF(e.target.value)
-			setCadastroForm({ ...CadastroForm, cpf })
+			setCadastroForm({ ...cadastroForm, cpf })
 		} else {
-			setCadastroForm({ ...CadastroForm, [e.target.name]: e.target.value })
+			setCadastroForm({ ...cadastroForm, [e.target.name]: e.target.value })
 		}
 	}
 
@@ -61,11 +48,10 @@ export default function Cadastro() {
 			phone: "",
 			cpf: "",
 			password: "",
-			password2: "",
 			terms: "",
 		})
 
-		if (CadastroForm.fullName.split(" ").length < 2) {
+		if (cadastroForm.fullName.split(" ").length < 2) {
 			setErrors((prev) => {
 				return { ...prev, fullName: "Coloque pelo menos o nome e o sobrenome" }
 			})
@@ -75,8 +61,8 @@ export default function Cadastro() {
 			})
 		}
 
-		if (CadastroForm.phone) {
-			let phoneIsValid = checkPhoneNumber(CadastroForm.phone)
+		if (cadastroForm.phone) {
+			let phoneIsValid = checkPhoneNumber(cadastroForm.phone)
 			if (!phoneIsValid.valid) {
 				setErrors((prev) => {
 					return { ...prev, phone: phoneIsValid.message }
@@ -88,8 +74,8 @@ export default function Cadastro() {
 			}
 		}
 
-		if (CadastroForm.cpf) {
-			let cpfIsValid = checkCPF(CadastroForm.cpf)
+		if (cadastroForm.cpf) {
+			let cpfIsValid = checkCPF(cadastroForm.cpf)
 			if (!cpfIsValid.valid) {
 				setErrors((prev) => {
 					return { ...prev, cpf: cpfIsValid.message }
@@ -101,7 +87,11 @@ export default function Cadastro() {
 			}
 		}
 
-		if (CadastroForm.password.length < 8) {
+		if (cadastroForm.password != cadastroForm.password2) {
+			setErrors((prev) => {
+				return { ...prev, password: "As senhas não são iguais" }
+			})
+		} else if (cadastroForm.password.length < 8) {
 			setErrors((prev) => {
 				return { ...prev, password: "A senha precisa ter 8 caracteres" }
 			})
@@ -111,7 +101,7 @@ export default function Cadastro() {
 			})
 		}
 
-		if (!CadastroForm.terms) {
+		if (!cadastroForm.terms) {
 			setErrors((prev) => {
 				return { ...prev, terms: "Você precisa aceitar os termos" }
 			})
@@ -130,7 +120,7 @@ export default function Cadastro() {
 			!errors.password2 &&
 			!errors.terms
 		) {
-			alert("Formulário enviado com sucesso!")
+			// alert("Formulário enviado com sucesso!")
 		}
 	}
 
@@ -151,7 +141,7 @@ export default function Cadastro() {
 								type="text"
 								id="fullName"
 								placeholder="Nome Completo"
-								value={CadastroForm.fullName}
+								value={cadastroForm.fullName}
 								onChange={handleChange}
 								required
 							/>
@@ -165,7 +155,7 @@ export default function Cadastro() {
 								type="email"
 								id="email"
 								placeholder="Email"
-								value={CadastroForm.email}
+								value={cadastroForm.email}
 								onChange={handleChange}
 								required
 							/>
@@ -179,7 +169,7 @@ export default function Cadastro() {
 								type="text"
 								id="phone"
 								placeholder="Telefone"
-								value={CadastroForm.phone}
+								value={cadastroForm.phone}
 								onChange={handleChange}
 							/>
 							{errors.phone && <p className="error">{errors.phone}</p>}
@@ -192,7 +182,7 @@ export default function Cadastro() {
 								type="text"
 								id="cpf"
 								placeholder="CPF"
-								value={CadastroForm.cpf}
+								value={cadastroForm.cpf}
 								onChange={handleChange}
 							/>
 							{errors.cpf && <p className="error">{errors.cpf}</p>}
@@ -205,7 +195,19 @@ export default function Cadastro() {
 								type="password"
 								id="password"
 								placeholder="Senha"
-								value={CadastroForm.password}
+								value={cadastroForm.password}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+						<div className="inputGroup">
+							<CustomInput
+								icon="material-symbols:lock-outline"
+								name="password2"
+								type="password"
+								id="password2"
+								placeholder="Confirmar senha"
+								value={cadastroForm.password2}
 								onChange={handleChange}
 								required
 							/>
@@ -221,12 +223,17 @@ export default function Cadastro() {
 								type="checkbox"
 								name="terms"
 								id="terms"
-								value={CadastroForm.terms}
+								value={cadastroForm.terms}
 								onChange={(e) =>
-									setCadastroForm({ ...CadastroForm, terms: e.target.checked })
+									setCadastroForm({ ...cadastroForm, terms: e.target.checked })
 								}
 							/>
-							<span>Aceito os termos de serviço</span>
+							<span>
+								Aceito os{" "}
+								<a href="./termos" target="_blank">
+									termos de serviço
+								</a>
+							</span>
 						</label>
 						{errors.terms && <p className="error">{errors.terms}</p>}
 
