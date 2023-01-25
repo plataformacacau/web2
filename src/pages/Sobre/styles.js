@@ -48,7 +48,7 @@ export const StyledSobre = styled("div", {
 
 		".mainImage": {
 			position: "absolute",
-			top: 80,
+			top: 0,
 			left: 0,
 			right: 0,
 			height: "70vh",

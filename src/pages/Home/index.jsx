@@ -15,7 +15,9 @@ export default function Home() {
 					período do cultivo do cacau, servindo como ferramenta de análise e prospecção.
 				</p>
 				<div className="botoes">
-					<Botao outline>Faça Login</Botao>
+					<Botao href="./login" outline>
+						Faça Login
+					</Botao>
 					<Botao href="./sobre">Saiba mais</Botao>
 				</div>
 				<div className="BG">
