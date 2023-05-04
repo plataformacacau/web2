@@ -14,8 +14,6 @@ export default function Login() {
 		email: "",
 		password: "",
 	})
-
-
 	function handleSubmit(e) {
 		e.preventDefault()
 		if (!user_list) {

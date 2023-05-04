@@ -21,14 +21,6 @@ export default function Cadastro() {
 		password: "",
 		password2: "",
 		terms: false,
-		/*fullName: "Samuel Correia Nascimento",
-		email: "samuca.7cn@gmail.com",
-		phone: "(73) 9 8812-1518",
-		whatsapp: "(73) 9 8812-1518",
-		cpf: "064.897.345-08",
-		password: "12345678",
-		password2: "12345678",
-		terms: true,*/
 	})
 
 	const [errors, setErrors] = useState({
@@ -134,7 +126,6 @@ export default function Cadastro() {
 				return { ...prev, terms: "" }
 			})
 		}
-
 		if (user_list.filter((el) => ((
 			el.email === cadastroForm.email) ||
 			el.phone === cadastroForm.phone))
@@ -162,7 +153,6 @@ export default function Cadastro() {
 	return (
 		<Layout header="Início">
 			<StyledCadastro>
-
 				<div className="content">
 					<h1>Cadastre-se na plataforma!</h1>
 					<form action="" onSubmit={handleSubmit}>
@@ -232,7 +222,6 @@ export default function Cadastro() {
 							/>
 							{errors.password && <p className="error">{errors.password}</p>}
 						</div>
-
 						<div className="inputGroup">
 							<label htmlFor="terms">
 								<span>
@@ -258,7 +247,6 @@ export default function Cadastro() {
 							<span>Já tem uma conta? </span>
 							<a href="./login"> Faça login!</a>
 						</span>
-
 						<button type="submit" disabled={!formIsValid}>
 							Cadastrar
 						</button>

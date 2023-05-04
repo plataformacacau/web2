@@ -17,10 +17,8 @@ export default function Header(props) {
 	const { height, width } = useWindowDimensions()
 	const breakpointMobile = 1000
 	const [menuShow, setMenuShow] = useState(false)
-
 	const [account_button_href, setAccountButtonHref] = useState(logged_user !== null ? '/logout' : '/login');
 	const [account_button_name, setAccountButtonName] = useState(logged_user !== null ? 'Logout' : 'Login');
-
 	return (
 		<>
 			<StyledHeader>
